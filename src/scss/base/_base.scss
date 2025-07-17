@@ -1,0 +1,8 @@
+@use '../utils/functions' as fn;
+@use '../utils/variables' as var;
+
+body{
+ font-family: var.$main-font, sans-serif;
+ background-color: fn.get-color('bodyColor');
+ height: 100vh;
+}
