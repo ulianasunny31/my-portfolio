@@ -1,9 +1,9 @@
-// import profilePic from '../../assets/profile-pic.jpg';
+import profilePic from '../../assets/profile-pic.jpg';
 
 const Aside = () => {
   return (
-    <aside>
-      {/* <img src={profilePic} alt="Profile picture"></img> */}
+    <aside className="sidebar">
+      <img src={profilePic} alt="Profile picture"></img>
       <h3>Uliana Seredenko</h3>
       <p>Essen, NRW, Germany </p>
       <ul className="contact-info">

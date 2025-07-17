@@ -1,12 +1,23 @@
 $breakpoints: (
     'sm':375px,
     'md':768px,
-    'lg':1200px,
+    'lg':1100px,
+    'xl':1440px,
 );
 
 $colors:(
  'bodyColor':#393646,
  'textColor':white,
  'bodyPartColor': #4F4557,
- 'accentColor':#FFBC1E
+ 'accentColor':#FFBC1E,
+ 'lightHeaderColor':#6D5D6E,
+ 'hoverColor':#594c5a,
+);
+
+$main-font: 'TiktokSans';
+
+$font-weights: (
+    'Regular': 400,
+    'Medium': 500,
+    'Bold': 700,
 );

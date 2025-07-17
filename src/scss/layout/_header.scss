@@ -1,0 +1,76 @@
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+
+.header{
+    grid-area: header;
+    display: flex;
+  
+   gap: 0;
+   margin-bottom: 20px;
+}
+
+.navigation {
+    transform: translateX(-150%);
+    transition: transform 600ms ease;
+    
+    display: flex;
+        align-items: center;
+        gap: 10px;
+
+    .header.is-open & {
+        transform: translateX(0);
+        transition: transform 600ms ease;
+
+        margin-left: 20px;
+    } 
+    
+    @include mx.mediaQuery('md') {
+      transform: translateX(0);
+      transition: none;
+      margin-left: 20px;
+    }
+
+    @include mx.mediaQuery('lg'){
+
+    }
+
+    & .navlink{
+        background-color: fn.get-color('bodyPartColor');
+        padding: 10px;
+        border-radius: 15px;
+        color: fn.get-color('accentColor');
+
+        &:hover, &:focus {
+            background-color: fn.get-color('hoverColor');
+           transform: scale(0.95);
+        }
+
+        @include mx.mediaQuery('md'){
+            background-color: fn.get-color('lightHeaderColor');
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        @include mx.mediaQuery('lg') {  
+            font-size: 20px;
+        }
+
+        @include mx.mediaQuery('lg') {
+         font-size: 22px;
+        padding: 12px;
+        }
+    }
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    fill: fn.get-color('accentColor');
+    color: fn.get-color('accentColor');
+
+    @include mx.mediaQuery('md') {
+       display: none;
+    }
+}

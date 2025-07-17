@@ -5,12 +5,9 @@ import Header from './components/Header';
 const Layout = () => {
   return (
     <div className="page">
-      <Aside />
-      <div className="main-content">
-        <Header />
-        <div className="page-content">
-          <Outlet />
-        </div>
+      <Aside /> <Header />
+      <div className="page-content">
+        <Outlet />
       </div>
     </div>
   );

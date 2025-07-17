@@ -1,3 +1,86 @@
-.sidebar{
-    grid-area: sidebar;
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.sidebar {
+  grid-area: sidebar;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: fn.get-color('textColor');
+
+  margin-bottom: 30px;
+
+  @include mx.mediaQuery('md') {
+    padding-top: 20px;
+    height: 65%;
+    border: 1px solid fn.get-color('lightHeaderColor');
+    border-radius: 15px;
+  }
+
+  @include mx.mediaQuery('xl') {
+    height: 60%;
+  }
+
+  & img {
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+
+    @include mx.mediaQuery('xl') {
+      width: 200px;
+      height: 250px;
+    }
+  }
+
+  & h3{
+    font-size: 20px;
+    font-weight: 700;
+
+    @include mx.mediaQuery('xl') {
+      font-size: 24px;
+    }
+  }
+
+  & p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-style: italic;
+
+    @include mx.mediaQuery('xl') {
+      font-size: 17px;
+    }
+  }
+
+ 
+
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+ 
+  & li {
+    font-size: 16px;
+    font-weight: 400;
+    
+  
+    display: flex;
+    gap: 5px;
+  
+    @include mx.mediaQuery('xl') {
+      font-size: 18px;
+    }
+  
+    & a {
+      text-decoration: underline;
+    }
+  }
+ 
 }
