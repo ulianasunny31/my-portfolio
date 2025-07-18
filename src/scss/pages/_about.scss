@@ -1,0 +1,95 @@
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    margin-bottom: 40px;
+
+    //about text
+
+    & p{
+        color: fn.get-color('textColor');
+
+        @include mx.mediaQuery('md') {
+            font-size: 16px;
+        }
+
+        @include mx.mediaQuery('lg') {
+            font-size: 17px;
+        }
+
+        @include mx.mediaQuery('xl') {
+            font-size: 20px;
+        }
+    }
+}
+
+.about{   
+    padding: 30px 20px 50px;
+
+    @include mx.mediaQuery('md') {
+        padding: 20px 30px 40px;
+    }
+ 
+    //soft skills title
+    & h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: fn.get-color('accentColor');
+        margin-bottom: 10px;
+        
+    @include mx.mediaQuery('lg') {
+       font-size: 22px;
+    }
+
+    @include mx.mediaQuery('xl') {
+       font-size: 25px;
+    }
+    }
+
+    
+}
+
+.soft-skills-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    & li {
+        cursor: pointer;
+        width: calc((100% - 10px) / 2);
+        padding: 5px;
+        font-size: 16px;
+
+        color:black;
+        background-color: fn.get-color('accentColor');
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        @include mx.mediaQuery('lg') {
+            width: calc((100% - 20px) / 3);
+            font-size: 18px;
+        }
+
+        @include mx.mediaQuery('xl') {
+            font-size: 20px;
+            height: 50px;
+        }
+
+        &:hover {
+          background-color: transparent;
+          border: 1px solid fn.get-color('accentColor');
+          color: fn.get-color('textColor');
+        }
+    }
+}

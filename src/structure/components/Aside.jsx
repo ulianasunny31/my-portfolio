@@ -1,11 +1,15 @@
 import profilePic from '../../assets/profile-pic.jpg';
+import { FaLocationDot } from 'react-icons/fa6';
 
 const Aside = () => {
   return (
     <aside className="sidebar">
       <img src={profilePic} alt="Profile picture"></img>
       <h3>Uliana Seredenko</h3>
-      <p>Essen, NRW, Germany </p>
+      <h4>Frontend Developer</h4>
+      <p>
+        <FaLocationDot className="location-icon" /> Essen, NRW, Germany
+      </p>
       <ul className="contact-info">
         <li>
           Github:

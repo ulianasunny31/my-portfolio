@@ -9,7 +9,13 @@
   
    gap: 0;
    margin-bottom: 20px;
+   
+   @include mx.mediaQuery('md') {
+    margin-bottom: 0;
 }
+}
+
+
 
 .navigation {
     transform: translateX(-150%);
@@ -37,10 +43,14 @@
     }
 
     & .navlink{
+        cursor: pointer;
+
         background-color: fn.get-color('bodyPartColor');
+         color: fn.get-color('accentColor');
+         
         padding: 10px;
         border-radius: 15px;
-        color: fn.get-color('accentColor');
+       
 
         &:hover, &:focus {
             background-color: fn.get-color('hoverColor');
