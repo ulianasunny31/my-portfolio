@@ -1,0 +1,69 @@
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.form{
+    display: flex;
+    flex-direction: column;
+
+
+    & h3 {
+        color: fn.get-color('accentColor');
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+
+        @include mx.mediaQuery('md') {
+            margin-bottom: 15px;
+        }
+    }
+
+    & .input{
+        border: 1px solid fn.get-color('textColor');
+        border-radius: 10px;
+        color: fn.get-color('textColor');
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    & .textarea {
+       border: 1px solid fn.get-color('textColor');
+       border-radius: 10px;
+       color: fn.get-color('textColor');
+
+       padding: 10px;
+       font-size: 16px;
+       margin-bottom: 20px;
+       height: 120px;
+
+      white-space: pre-wrap;  
+      word-wrap: break-word;  
+      overflow-x: hidden;
+
+    @include mx.mediaQuery('xl') {
+            height: 150px;   
+        }
+    }
+
+    & button { 
+      width: 100px;
+      padding: 10px;
+      font-weight: 500;
+
+      background-color: fn.get-color('accentColor');
+      color: black;
+      border-radius: 5px;
+      margin: 0 auto;
+      cursor: pointer;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      &:hover {
+        background-color: fn.get-color('darkAccentColor');
+      }
+    }
+}

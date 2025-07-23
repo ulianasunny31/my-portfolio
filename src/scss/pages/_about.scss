@@ -63,6 +63,7 @@
     & li {
         cursor: pointer;
         width: calc((100% - 10px) / 2);
+        height: 40px;
         padding: 5px;
         font-size: 16px;
 
@@ -77,6 +78,7 @@
         text-align: center;
 
         @include mx.mediaQuery('lg') {
+            height: 50px;
             width: calc((100% - 20px) / 3);
             font-size: 18px;
         }

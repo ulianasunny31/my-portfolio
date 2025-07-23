@@ -1,5 +1,6 @@
 import profilePic from '../../assets/profile-pic.jpg';
 import { FaLocationDot } from 'react-icons/fa6';
+import FeedbackForm from './FeedbackForm';
 
 const Aside = () => {
   return (
@@ -33,6 +34,7 @@ const Aside = () => {
           </a>
         </li>
       </ul>
+      <FeedbackForm className="form feedbackFormAside" />
     </aside>
   );
 };
