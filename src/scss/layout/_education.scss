@@ -1,0 +1,155 @@
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+
+.educationDiv h2 {
+    color: fn.get-color('accentColor');
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.edPlace {
+    color: fn.get-color('darkAccentColor');
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.edName {
+    color: fn.get-color('textColor');
+    font-style: italic;
+    font-size: 16px;
+}
+
+.edList{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+ 
+}
+
+.edList .p1 {
+    position: absolute;
+    top: 0;
+    left: 240px;
+    width: 150px;
+    font-size: 14px;
+    font-style: italic;
+    color: fn.get-color('textColor');
+}
+
+.edList .p2 {
+ margin-left: 220px;
+    width: 150px;
+    font-size: 14px;
+    font-style: italic;
+    color: fn.get-color('textColor');
+}
+
+.edDuties {
+    list-style: square;
+    color: fn.get-color('textColor');
+    padding: 20px;
+}
+
+@include mx.mediaQuery('md') {
+    .educationDiv h2 {
+            font-size: 18px;
+        }
+    
+        .edPlace {
+            font-size: 14px;
+        }
+    
+        .edName {
+            font-size: 15px;
+        }
+    
+    
+        .edList .p1 {
+      
+            left: 230px;
+            width: 150px;
+            font-size: 14px;
+            font-style: italic;
+            color: fn.get-color('textColor');
+        }
+    
+        .edList .p2 {
+            margin-left: 195px;
+            width: 150px;
+            font-size: 14px;
+            font-style: italic;
+            color: fn.get-color('textColor');
+        }
+    
+        .edDuties {
+            font-size: 14px;
+            width: 340px;
+        }
+}
+
+@include mx.mediaQuery('lg') {
+    .educationDiv h2 {
+        
+            font-size: 22px;
+        }
+    
+        .edPlace {
+            font-size: 16px;
+        }
+    
+        .edName {
+            font-size: 17px;
+        }
+    
+        .edList .p1 {
+            left: 550px;
+            width: 150px;
+            font-size: 15px;
+        }
+    
+        .edList .p2 {
+            margin-left: 550px;
+            width: 150px;
+            font-size: 15px;
+        }
+    
+        .edDuties {
+            font-size: 16px;
+            width: 500px;
+        }
+}
+
+@include mx.mediaQuery('xl') {
+    .educationDiv h2 {
+        font-size: 25px;
+    }
+
+    .edPlace {
+        font-size: 19px;
+    }
+
+    .edName {
+        font-size: 20px;
+    }
+
+    .edList .p1 {
+        left: 750px;
+        width: 150px;
+        font-size: 17px;
+    }
+
+    .edList .p2 {
+        margin-left: 750px;
+        width: 150px;
+        font-size: 17px;
+    }
+
+    .edDuties {
+        font-size: 20px;
+        width: 800px;
+    }
+}
