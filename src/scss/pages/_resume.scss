@@ -1,5 +1,6 @@
  
 @use '../utils/mixins' as mx;
+
 .resumeDiv{
     padding: 20px 0;
 }
@@ -11,6 +12,4 @@
 }
 }
 
-@include mx.mediaQuery('lg') {}
-
-@include mx.mediaQuery('xl') {}
+ 
