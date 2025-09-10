@@ -2,6 +2,36 @@
 @use '../utils/functions' as fn;
 @use '../utils/mixins' as mx;
 
+.projectsContainer{
+    margin-bottom: 40px;
+
+
+    @include mx.mediaQuery('md') {
+       overflow-y: scroll;
+       height: 650px;
+       padding: 10px;
+
+    &::-webkit-scrollbar {
+         width: 10px;
+        }
+    
+    &::-webkit-scrollbar-track {
+        background: fn.get-color('lightHeaderColor');
+        border-radius: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color:fn.get-color('bodyColor');
+        border-radius: 10px;
+                
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    }
+}
+
 .projectsList{
     display: flex;
     flex-direction: column;
@@ -15,7 +45,6 @@
         background-color: fn.get-color('bodyPartColor');
         padding: 20px;
         border-radius: 10%;
-
     }
 
     & h4{
@@ -26,6 +55,14 @@
         margin-bottom: 10px;
     }
 
+    & p {
+        text-align: center;
+        color: fn.get-color('textColor');
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
     & img {
         width: 250px;
         border-radius: 10%;
@@ -33,6 +70,125 @@
     }
 }
 
- 
+.sitesBtns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    & a {
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        color: fn.get-color('textColor');
+        background-color:fn.get-color('darkBtnPurple');
+        transition: background-color 0.3s ease;
+
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &:hover {
+            background-color: fn.get-color('lightBtnPurple');
+        }
+    }
+}
 
  
+@include mx.mediaQuery('md') {
+.projectsList {
+        & li {
+            padding: 15px 10px;
+            border: 4px solid fn.get-color('hoverColor');
+        }
+
+        & p {
+            font-size: 15px;
+        }
+
+        & img {
+            width: 200px;
+        }
+    }
+}
+ 
+
+@include mx.mediaQuery('lg') {
+    .projectsList {
+        & li {
+            padding: 20px;
+            width: 500px;
+        }
+
+        & h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+      }
+
+        & p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        & img {
+            width: 300px;
+        }
+    }
+
+    .sitesBtns {
+        gap: 40px;
+    
+        & a {
+         padding: 10px 14px;
+         font-size: 16px;
+         gap: 5px;
+    
+        &:hover {
+            background-color: fn.get-color('lightBtnPurple');
+            }
+        }
+    }
+}
+
+@include mx.mediaQuery('xl') {
+    .projectsList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & li {
+            padding: 25px;
+            width: 400px;
+        }
+
+        & h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+      }
+
+        & p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        & img {
+            width: 300px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .sitesBtns {
+        gap: 40px;
+    
+        & a {
+         padding: 12px 16px;
+         font-size: 18px;
+         gap: 8px;
+    
+        &:hover {
+            background-color: fn.get-color('lightBtnPurple');
+            }
+        }
+    }
+}

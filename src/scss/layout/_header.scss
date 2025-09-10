@@ -13,9 +13,13 @@
    @include mx.mediaQuery('md') {
     margin-bottom: 0;
 }
+
+@include mx.mediaQuery('lg') {
+   margin-left: 30px;
+ padding-bottom:10px ;
 }
 
-
+}
 
 .navigation {
     transform: translateX(-150%);

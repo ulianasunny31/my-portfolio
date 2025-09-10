@@ -27,22 +27,22 @@
     display: flex;
     flex-direction: column;
     gap:20px;
- 
 }
 
 .edList .p1 {
     position: absolute;
     top: 0;
     left: 240px;
-    width: 150px;
+    width: 100px;
     font-size: 14px;
     font-style: italic;
     color: fn.get-color('textColor');
 }
 
 .edList .p2 {
- margin-left: 220px;
-    width: 150px;
+    margin-top: 5px;
+   margin-left: 210px;
+    width: 130px;
     font-size: 14px;
     font-style: italic;
     color: fn.get-color('textColor');
@@ -51,7 +51,8 @@
 .edDuties {
     list-style: square;
     color: fn.get-color('textColor');
-    padding: 20px;
+    padding: 20px 0 0 20px;
+   width: 310px;
 }
 
 @include mx.mediaQuery('md') {

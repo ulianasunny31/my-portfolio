@@ -34,7 +34,7 @@
     position: absolute;
     top: 0;
     left: 240px;
-    width: 150px;
+    width: 110px;
     font-size: 14px;
     font-style: italic;
     color: fn.get-color('textColor');
@@ -43,7 +43,8 @@
 .profDuties{
     list-style:square;
     color: fn.get-color('textColor');
-    padding: 20px;
+    padding: 20px 0 0 20px;
+    width: 310px;
 }
 
 @include mx.mediaQuery('md') {

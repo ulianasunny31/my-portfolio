@@ -5,6 +5,7 @@ import devPortfolio from '../../assets/projects/devportfolio.png';
 import moneyGuard from '../../assets/projects/money-guard.png';
 import qubly from '../../assets/projects/qubly.png';
 import theBox from '../../assets/projects/thebox.png';
+import webStudio from '../../assets/projects/webstudio.png';
 
 const Projects = () => {
   return (
@@ -16,19 +17,21 @@ const Projects = () => {
           <div className="projectDescr">
             <h4 className="projectName">Money Guard</h4>
             <p className="descrP">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-              asperiores nam ipsam ducimus corporis qui tempore vel, provident
-              ullam similique obcaecati voluptate facere dolorum quidem
-              perspiciatis velit doloremque minus non?
+              Collaborated on project for budget tracking and financial planning
+              focused mainly on React and Node.Js functionality. Personally
+              developed a currency tab section, fully responsive an
+              user-friendly.
             </p>
             <div className="sitesBtns">
               <a
+                target="_blank"
                 href="https://github.com/oykss/team-money-guard"
                 className="githubBtn"
               >
                 <FaGithub /> Github
               </a>
               <a
+                target="_blank"
                 href="https://team-money-guard.vercel.app/"
                 className="websiteBtn"
               >
@@ -43,17 +46,24 @@ const Projects = () => {
           <div className="projectDescr">
             <h4 className="projectName">Developer Portfolio</h4>
             <p className="descrP">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-              exercitationem, officiis totam, quis similique aut adipisci eaque
-              explicabo maiores facere ut laboriosam perspiciatis nobis
-              obcaecati cum? Nisi, odit. Harum, fugit!
+              Collaborated on a team portfolio project with a focus on
+              JavaScript functionality. Personally developed and implemented the
+              accordion section, ensuring seamless integration, responsiveness,
+              and user-friendly design.
             </p>
             <div className="sitesBtns">
-              <a href="" className="githubBtn">
+              <a
+                href="https://github.com/1ster14ka/js-avengers"
+                className="githubBtn"
+              >
                 <FaGithub />
                 Github
               </a>
-              <a href="" className="websiteBtn">
+              <a
+                target="_blank"
+                href="https://1ster14ka.github.io/js-avengers/"
+                className="websiteBtn"
+              >
                 <MdOutlinePreview />
                 Live Preview
               </a>
@@ -65,16 +75,23 @@ const Projects = () => {
           <img src={focusFrameImg} alt="Focus.Frame" />
           <div className="projectDescr">
             <h4 className="projectName">Focus.Frame</h4>
-            <p className="descrP"></p>
+            <p className="descrP">
+              Collaborated on a team project to develop a website, focusing on
+              creating and implementing a specific section using HTML, CSS.
+              Ensured responsive design, functionality, and seamless integration
+              with other components.
+            </p>
 
             <div className="sitesBtns">
               <a
+                target="_blank"
                 href="https://github.com/Skw1/project-Bt11cptb"
                 className="githubBtn"
               >
                 <FaGithub /> Github
               </a>
               <a
+                target="_blank"
                 href="https://skw1.github.io/project-Bt11cptb/"
                 className="websiteBtn"
               >
@@ -85,18 +102,24 @@ const Projects = () => {
         </li>
         {/* Project 4 */}
         <li>
-          <img src="" alt="" />
+          <img src={webStudio} alt="WEBSTUDIO" />
           <div className="projectDescr">
-            <h4 className="projectName"></h4>
-            <p className="descrP">WEBSTUDIO</p>
+            <h4 className="projectName">WEBSTUDIO</h4>
+            <p className="descrP">
+              Developed a personal project featuring a responsive design and an
+              interactive form using HTML, CSS, and JavaScript. Focused on
+              usability, aesthetics, and ensuring compatibility across devices.
+            </p>
             <div className="sitesBtns">
               <a
+                target="_blank"
                 href="https://github.com/ulianasunny31/goit-markup-hw-06"
                 className="githubBtn"
               >
                 <FaGithub /> Github
               </a>
               <a
+                target="_blank"
                 href="https://ulianasunny31.github.io/goit-markup-hw-06/"
                 className="websiteBtn"
               >
@@ -107,18 +130,23 @@ const Projects = () => {
         </li>
         {/* Project 5 */}
         <li>
-          <img src={theBox} alt="" />
+          <img src={theBox} alt="The Box Landing" />
           <div className="projectDescr">
             <h4 className="projectName">The Box Landing</h4>
-            <p className="descrP"></p>
+            <p className="descrP">
+              Developed a landing page using HTML and CSS, focusing on clean
+              structure and semantic markup.
+            </p>
             <div className="sitesBtns">
               <a
+                target="_blank"
                 href="https://github.com/ulianasunny31/the-box-landing"
                 className="githubBtn"
               >
                 <FaGithub /> Github
               </a>
               <a
+                target="_blank"
                 href="https://ulianasunny31.github.io/the-box-landing/"
                 className="websiteBtn"
               >
@@ -127,15 +155,18 @@ const Projects = () => {
             </div>
           </div>
         </li>
-
         {/* Project 6*/}
         <li>
-          <img src={qubly} alt="" />
+          <img src={qubly} alt="Qubly Landing" />
           <div className="projectDescr">
             <h4 className="projectName">Qubly Landing</h4>
-            <p className="descrP"></p>
+            <p className="descrP">
+              Designed and built a landing page with HTML and CSS. Focused on
+              usability, performance, and maintainable code structure.
+            </p>
             <div className="sitesBtns">
               <a
+                target="_blank"
                 href="https://github.com/ulianasunny31/qubly-landing"
                 className="githubBtn"
               >
@@ -143,6 +174,7 @@ const Projects = () => {
                 Github
               </a>
               <a
+                target="_blank"
                 href="https://ulianasunny31.github.io/qubly-landing/"
                 className="websiteBtn"
               >
